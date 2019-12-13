@@ -215,7 +215,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-09 11:25:13" itemprop="dateModified" datetime="2019-12-09T11:25:13+08:00">2019-12-09</time>
+                <time title="修改时间：2019-12-10 19:55:06" itemprop="dateModified" datetime="2019-12-10T19:55:06+08:00">2019-12-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -235,7 +235,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -769,34 +769,18 @@
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
   </div>
 
-<span id="sitetime"></span>
-<script language=javascript>
-  function siteTime(){
-    window.setTimeout("siteTime()", 1000);
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-    var today = new Date();
-    var todayYear = today.getFullYear();
-    var todayMonth = today.getMonth()+1;
-    var todayDate = today.getDate();
-    var todayHour = today.getHours();
-    var todayMinute = today.getMinutes();
-    var todaySecond = today.getSeconds();
-    var t1 = Date.UTC(2018,06,07,12,00,00); // 设置建立网站的时间
-    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-    var diff = t2-t1;
-    var diffYears = Math.floor(diff/years);
-    var diffDays = Math.floor((diff/days)-diffYears*365);
-    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-    document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
-  }
-  siteTime();
-</script>
+<% if (theme.busuanzi && theme.busuanzi.enable){ %>
+       <!-- 不蒜子统计 -->
+       <span id="busuanzi_container_site_pv">
+               本站总访问量<span id="busuanzi_value_site_pv"></span>次
+       </span>
+       <span class="post-meta-divider">|</span>
+       <span id="busuanzi_container_site_uv" style='display:none'>
+               本站访客数<span id="busuanzi_value_site_uv"></span>人
+       </span>
+       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ <% } %>
+
 
         
 
